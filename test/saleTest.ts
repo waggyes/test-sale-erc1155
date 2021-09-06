@@ -382,7 +382,6 @@ describe('test sale', () => {
                             let iface = new ethers.utils.Interface(ABI);
                             const encodedData = iface.encodeFunctionData("buy", [ 1 ]);
                             const tx = await sale.connect(alice).magicFunction(encodedData, {value: ITEM_PRICE});
-                            console.log(alice.address);
                             const receipt = await tx.wait();
                             const gasUsed = receipt.gasUsed;
                             const gasPrice = tx.gasPrice;

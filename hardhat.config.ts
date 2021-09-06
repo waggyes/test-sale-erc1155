@@ -5,9 +5,9 @@ import "hardhat-gas-reporter"
 import "@nomiclabs/hardhat-etherscan"
 import 'hardhat-deploy'
 import 'hardhat-deploy-ethers'
-import fs from 'fs';
+// import fs from 'fs';
 
-const mnemonic = fs.readFileSync('.secret').toString().trim();
+// const mnemonic = fs.readFileSync('.secret').toString().trim();
 
 export default {
     networks: {
@@ -20,12 +20,12 @@ export default {
         //     gasPrice: 7000000000,
         //     accounts: {mnemonic: mnemonic}
         // },
-        rinkeby: {
-            url: `https://rinkeby.infura.io/v3/${process.env.INFURA_ID}`,
-            chainId: 4,
-            gasPrice: 7000000000,
-            accounts: {mnemonic: mnemonic}
-        },
+        // rinkeby: {
+        //     url: `https://rinkeby.infura.io/v3/${process.env.INFURA_ID}`,
+        //     chainId: 4,
+        //     gasPrice: 7000000000,
+        //     accounts: {mnemonic: mnemonic}
+        // },
     },
     etherscan: {
         apiKey: process.env.ETHERSCAN_API_KEY,
